@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voltair - A Faster Inspection Service For Power Utilities</title>
+    <title>Sentiom - Een beter beeld van wat speelt in jouw gemeente</title>
+    <meta name="description" content="Sentiom volgt doorlopend wat er speelt binnen uw gemeente. Nieuws, social media en beleidsontwikkelingen samengebracht in één overzicht voor onderbouwde beleidskeuzes.">
+    <meta name="keywords" content="Sentiom, gemeente, beleid, nieuws, social media, DataDoor, gemeentelijk beleid">
+    <meta name="author" content="DataDoor">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sentiom.nl/">
+    <meta property="og:title" content="Sentiom - Een beter beeld van wat speelt in jouw gemeente">
+    <meta property="og:description" content="Sentiom volgt doorlopend wat er speelt binnen uw gemeente. Nieuws, social media en beleidsontwikkelingen samengebracht in één overzicht.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sentiom.nl/">
+    <meta property="twitter:title" content="Sentiom - Een beter beeld van wat speelt in jouw gemeente">
+    <meta property="twitter:description" content="Sentiom volgt doorlopend wat er speelt binnen uw gemeente. Nieuws, social media en beleidsontwikkelingen samengebracht in één overzicht.">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,13 +28,10 @@
         <div class="nav-container">
             <a href="/" class="nav-logo">Sentiom</a>
             <div class="nav-menu">
-                <a href="#service">Our Service</a>
-                <a href="#rd">R&D</a>
-                <a href="#mission">Our Mission</a>
-                <a href="#news">News</a>
-                <a href="#careers">Careers</a>
+                <a href="#service">Over Sentiom</a>
+                <a href="#news">Nieuws</a>
             </div>
-            <a href="#contact" class="nav-cta">Contact Us</a>
+            <a href="mailto:contact@datadoor.nl" class="nav-cta">Contact</a>
         </div>
     </nav>
 
@@ -26,10 +39,10 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
-                <h1>Een <span class="highlight cycling-word">beter</span><br>beeld van wat er speelt in jouw gemeente</h1>
+                <h1>Een <span class="highlight cycling-word">Beter</span><br>Beeld Van Wat Speelt In Jouw Gemeente</h1>
                 <div class="hero-buttons">
-                    <a href="#rd" class="btn-primary">Meld je aan voor de Alpha</a>
-                    <a href="#contact" class="btn-secondary">Contact</a>
+                    <a href="mailto:contact@datadoor.nl" class="btn-primary">Meld je aan voor de Alpha</a>
+                    <a href="mailto:contact@datadoor.nl" class="btn-secondary">Contact</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -38,12 +51,28 @@
         </div>
     </section>
 
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="partners-container">
+            <div class="partners-logos">
+                <a href="https://www.rijswijk.nl" target="_blank">
+                    <img src="logos/rijswijk.jpeg" alt="Gemeente Rijswijk">
+                </a>
+                <a href="https://datadoor.nl/" target="_blank">
+                    <img src="logos/datadoor.png" alt="DataDoor">
+                </a>
+            </div>
+            <p class="partners-label">Onze Partners</p>
+        </div>
+    </section>
+
     <!-- AI + Drone Inspections -->
     <section id="service" class="section-two-col">
         <div class="two-col-container">
             <div class="two-col-text">
-                <h2>AI + Drone inspections accurately identify fault-prone issues</h2>
-                <p>Our AI-powered system delivers 5× better accuracy than traditional ground inspections. AI automatically flags exceptions and fault-prone issues, helping utilities prevent outages before they happen.</p>
+                <h2>Meer Inzicht, Minder Tijd</h2>
+                <p>Sentiom volgt doorlopend wat er speelt binnen uw gemeente. Nieuws, social media en beleidsontwikkelingen worden samengebracht in één overzicht.</p>
+                <p>Zo beschikt u altijd over actuele en relevante context voor onderbouwde beleidskeuzes.</p>
             </div>
             <div class="two-col-image">
                 <img src="images/birdseye.jpg" alt="AI Exception Detection">
@@ -58,105 +87,18 @@
                 <img src="images/pedestrians.jpg" alt="Lineman Safety">
             </div>
             <div class="two-col-text">
-                <h2>Drones Keep Linemen Safe</h2>
-                <p>Provide your field teams with critical situational awareness through high-resolution aerial imagery. Our drones inspect dangerous assets and inaccessible terrain, keeping your linemen out of harm's way.</p>
+                <h2>Automatische Dagelijkse Updates</h2>
+                <p>Elke ochtend ontvangt u een overzichtelijk rapport met de belangrijkste ontwikkelingen binnen uw gemeente, direct inzetbaar binnen uw organisatie. Zo blijft u moeiteloos op de hoogte.</p>
             </div>
         </div>
     </section>
 
     <!-- Terrain Access -->
-    <section class="section-full-image" style="background-image: url('images/redlight.jpg');">
+    <section class="section-full-image" style="background-image: url('images/bikes.jpg'); min-height: 700px; padding: 150px 0; margin-top: 80px;">
         <div class="full-image-overlay">
-            <h2>Inspect assets in the most inaccessible terrain across the US</h2>
-            <p>12-mile range capability</p>
-        </div>
-    </section>
-
-    <!-- Data Integration -->
-    <section class="section-two-col">
-        <div class="two-col-container">
-            <div class="two-col-text">
-                <h2>Insights Delivered with Ease</h2>
-                <p>Export inspection data in PDF, CSV, or Shapefile formats. Seamlessly integrate with your existing GIS workflows.</p>
-                <div class="hero-buttons" style="margin-top: 24px;">
-                    <a href="#demo" class="btn-secondary">View 3D Mesh Demo</a>
-                </div>
-            </div>
-            <div class="two-col-image">
-                <img src="images/skyscrapers.jpg" alt="GIS Integration">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-cta">
-        <div class="cta-container">
-            <h2>Contact Us</h2>
-            <p>Schedule a meeting with our team to discuss how we can help your utility improve inspection efficiency and safety.</p>
-            <div class="cta-buttons">
-                <a href="mailto:info@voltairlabs.com" class="btn-primary btn-white">Book a Meeting</a>
-                <a href="mailto:info@voltairlabs.com" class="btn-secondary btn-outline">Email Us</a>
-            </div>
-            <p style="margin-top: 24px; font-size: 16px;">info@voltairlabs.com</p>
-        </div>
-    </section>
-
-    <!-- R&D Section -->
-    <section id="rd" class="section-single">
-        <div class="single-container">
-            <h2>We're building the future of drone inspections</h2>
-            <p style="font-size: 24px; font-weight: 600; margin-top: 32px;">Tomorrow's Drone Inspections</p>
-            <h3 style="font-size: 32px; margin-top: 24px;">Drones That Recharge From Powerlines</h3>
-            <p>Coming soon in 2026</p>
-        </div>
-    </section>
-
-    <!-- R&D Partnership -->
-    <section class="section-two-col">
-        <div class="two-col-container">
-            <div class="two-col-text">
-                <h2>Partnership with Big Bend Electric Cooperative</h2>
-                <p>We're working with forward-thinking utilities to develop the next generation of autonomous inspection technology.</p>
-            </div>
-            <div class="two-col-image">
-                <img src="images/birdseye.jpg" alt="Partnership">
-            </div>
-        </div>
-    </section>
-
-    <!-- R&D Capabilities -->
-    <section class="section-three-col">
-        <div class="three-col-container">
-            <div class="three-col-header">
-                <h2>Autonomous Capabilities</h2>
-            </div>
-            <div class="three-col-grid">
-                <div class="three-col-item">
-                    <h3>Reliable Digital Twin</h3>
-                    <p>1350 miles per year inspection capacity with automated, continuous monitoring</p>
-                </div>
-                <div class="three-col-item">
-                    <h3>Rapid Emergency Deployment</h3>
-                    <p>Deploy inspection capabilities immediately when and where you need them most</p>
-                </div>
-                <div class="three-col-item">
-                    <h3>Pre-positioning for MEDs</h3>
-                    <p>Strategic placement for Major Event Days, providing critical situational awareness</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission" class="section-two-col-reverse">
-        <div class="two-col-container">
-            <div class="two-col-image">
-                <img src="images/pedestrians.jpg" alt="American Flag">
-            </div>
-            <div class="two-col-text">
-                <h2>Help America's Linemen Keep the Lights On</h2>
-                <p>Voltair is an all-American company based in Washington State. We're dedicated to supporting rural utilities and the hardworking linemen who keep our communities powered.</p>
-            </div>
+            <h2>Sentiom is nu in Alpha fase</h2>
+            <h3>Participatie is kosteloos en op aanvraag</h3>
+            <a href="mailto:contact@datadoor.nl" class="btn-primary btn-cta-large">Meld je nu aan</a>
         </div>
     </section>
 
@@ -164,40 +106,16 @@
     <section id="news" class="section-features">
         <div class="features-container">
             <div class="features-header">
-                <h2>News</h2>
+                <h2>Sentiom in het Nieuws</h2>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <img src="images/birdseye.jpg" alt="News" class="feature-card-image">
+                <a href="https://www.linkedin.com/posts/polderr_%F0%9D%90%96%F0%9D%90%9E-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%9E-%F0%9D%90%9A-%F0%9D%90%B0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%AB-yesterday-activity-7393721594663149568-om1M" target="_blank" class="feature-card" style="text-decoration: none; color: inherit;">
+                    <img src="images/hackaton.jpeg" alt="Nieuws" class="feature-card-image">
                     <div class="feature-card-content">
-                        <p style="font-size: 14px; color: #666; margin-bottom: 8px;">Sept 3, 2025</p>
-                        <h3>Voltair joins Y Combinator</h3>
+                        <h3>Team DataDoor wint Hackaton</h3>
+                        <p>November 2025</p>
                     </div>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/redlight.jpg" alt="News" class="feature-card-image">
-                    <div class="feature-card-content">
-                        <p style="font-size: 14px; color: #666; margin-bottom: 8px;">July 21, 2025</p>
-                        <h3>Fighting fire before it sparks</h3>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/pedestrians.jpg" alt="News" class="feature-card-image">
-                    <div class="feature-card-content">
-                        <p style="font-size: 14px; color: #666; margin-bottom: 8px;">May 23, 2025</p>
-                        <h3>Drone startup wins top prize</h3>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <img src="images/skyscrapers.jpg" alt="News" class="feature-card-image">
-                    <div class="feature-card-content">
-                        <p style="font-size: 14px; color: #666; margin-bottom: 8px;">April 4, 2025</p>
-                        <h3>Self-charging drones land top prize</h3>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -206,24 +124,36 @@
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h4>VOLTAIR</h4>
-                <p>A Safer, Smarter, and Faster Inspection Service For Power Utilities</p>
+                <h4>SENTIOM</h4>
+                <p class="footer-contact">
+                    <a href="https://www.linkedin.com/in/kenzo-h-6253411a4/" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@datadoor.nl">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                        contact@datadoor.nl
+                    </a>
+                </p>
+                <p>Een beter beeld van wat speelt in jouw gemeente</p>
             </div>
             <div class="footer-column">
-                <h4>Quick Links</h4>
-                <p><a href="#demo">3D Demo</a></p>
-                <p><a href="#careers">Careers</a></p>
-                <p><a href="mailto:info@voltairlabs.com">info@voltairlabs.com</a></p>
+                <h4>Snelle Links</h4>
+                <p><a href="#service">Over Sentiom</a></p>
+                <p><a href="#news">Nieuws</a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Voltair. All rights reserved.</p>
+            <p>© 2026 Sentiom. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         // Cycle through words in hero heading with flip animation
-        const words = ['beter', 'slimmer', 'sneller', 'actueler'];
+        const words = ['Beter', 'Slimmer', 'Sneller', 'Actueler'];
         let currentIndex = 0;
         const cyclingElement = document.querySelector('.cycling-word');
 
