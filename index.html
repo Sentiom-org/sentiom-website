@@ -29,6 +29,12 @@
     <link rel="icon" type="image/svg+xml" href="own logo files/SVG/Logomark white.svg" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="own logo files/PNG/Favicon@4x.png">
 
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#343FD5">
+
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="images/egghall-1920w.avif" type="image/avif">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,6 +52,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
@@ -57,7 +64,28 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/egghall.jpg" alt="Drone Platform">
+                <picture>
+                    <source
+                        srcset="images/egghall-800w.avif 800w,
+                                images/egghall-1200w.avif 1200w,
+                                images/egghall-1920w.avif 1920w"
+                        type="image/avif">
+                    <source
+                        srcset="images/egghall-800w.webp 800w,
+                                images/egghall-1200w.webp 1200w,
+                                images/egghall-1920w.webp 1920w"
+                        type="image/webp">
+                    <img
+                        src="images/egghall-1200w.jpg"
+                        srcset="images/egghall-800w.jpg 800w,
+                                images/egghall-1200w.jpg 1200w,
+                                images/egghall-1920w.jpg 1920w"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        width="1920"
+                        height="1280"
+                        alt="Drone Platform"
+                        loading="eager">
+                </picture>
             </div>
         </div>
     </section>
@@ -67,10 +95,16 @@
         <div class="partners-container">
             <div class="partners-logos">
                 <a href="https://www.rijswijk.nl" target="_blank">
-                    <img src="logos/rijswijk.jpeg" alt="Gemeente Rijswijk">
+                    <picture>
+                        <source srcset="logos/rijswijk-100w.webp 1x, logos/rijswijk-200w.webp 2x" type="image/webp">
+                        <img src="logos/rijswijk-100w.jpg" srcset="logos/rijswijk-200w.jpg 2x" alt="Gemeente Rijswijk" width="100" height="100" loading="lazy">
+                    </picture>
                 </a>
                 <a href="https://datadoor.nl/" target="_blank">
-                    <img src="logos/datadoor.png" alt="DataDoor">
+                    <picture>
+                        <source srcset="logos/datadoor-100w.webp 1x, logos/datadoor-200w.webp 2x" type="image/webp">
+                        <img src="logos/datadoor-100w.png" srcset="logos/datadoor-200w.png 2x" alt="DataDoor" width="100" height="100" loading="lazy">
+                    </picture>
                 </a>
             </div>
             <p class="partners-label">Onze Partners</p>
@@ -86,7 +120,28 @@
                 <p>Zo beschikt u altijd over actuele en relevante context voor onderbouwde beleidskeuzes.</p>
             </div>
             <div class="two-col-image">
-                <img src="images/birdseye.jpg" alt="AI Exception Detection">
+                <picture>
+                    <source
+                        srcset="images/birdseye-600w.avif 600w,
+                                images/birdseye-900w.avif 900w,
+                                images/birdseye-1200w.avif 1200w"
+                        type="image/avif">
+                    <source
+                        srcset="images/birdseye-600w.webp 600w,
+                                images/birdseye-900w.webp 900w,
+                                images/birdseye-1200w.webp 1200w"
+                        type="image/webp">
+                    <img
+                        src="images/birdseye-900w.jpg"
+                        srcset="images/birdseye-600w.jpg 600w,
+                                images/birdseye-900w.jpg 900w,
+                                images/birdseye-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 752px"
+                        width="1200"
+                        height="797"
+                        alt="AI Exception Detection"
+                        loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
@@ -95,7 +150,28 @@
     <section class="section-two-col-reverse">
         <div class="two-col-container">
             <div class="two-col-image">
-                <img src="images/roundabout-birdseye.jpg" alt="Automatische Updates">
+                <picture>
+                    <source
+                        srcset="images/roundabout-birdseye-600w.avif 600w,
+                                images/roundabout-birdseye-900w.avif 900w,
+                                images/roundabout-birdseye-1200w.avif 1200w"
+                        type="image/avif">
+                    <source
+                        srcset="images/roundabout-birdseye-600w.webp 600w,
+                                images/roundabout-birdseye-900w.webp 900w,
+                                images/roundabout-birdseye-1200w.webp 1200w"
+                        type="image/webp">
+                    <img
+                        src="images/roundabout-birdseye-900w.jpg"
+                        srcset="images/roundabout-birdseye-600w.jpg 600w,
+                                images/roundabout-birdseye-900w.jpg 900w,
+                                images/roundabout-birdseye-1200w.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 889px"
+                        width="1200"
+                        height="675"
+                        alt="Automatische Updates"
+                        loading="lazy">
+                </picture>
             </div>
             <div class="two-col-text">
                 <h2>Automatische Dagelijkse Updates</h2>
@@ -105,7 +181,36 @@
     </section>
 
     <!-- Terrain Access -->
-    <section class="section-full-image alpha-section" style="background-image: url('images/ns-train-horizontal.jpg'); background-position: center bottom; min-height: 700px; padding: 150px 0; margin-top: 80px;">
+    <section class="section-full-image alpha-section" style="min-height: 700px; padding: 150px 0; margin-top: 80px; position: relative; overflow: hidden;">
+        <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+            <source
+                media="(max-width: 768px)"
+                srcset="images/ns-train-horizontal-1000w.avif"
+                type="image/avif">
+            <source
+                media="(max-width: 1024px)"
+                srcset="images/ns-train-horizontal-1600w.avif"
+                type="image/avif">
+            <source
+                srcset="images/ns-train-horizontal-2400w.avif"
+                type="image/avif">
+            <source
+                media="(max-width: 768px)"
+                srcset="images/ns-train-horizontal-1000w.webp"
+                type="image/webp">
+            <source
+                media="(max-width: 1024px)"
+                srcset="images/ns-train-horizontal-1600w.webp"
+                type="image/webp">
+            <source
+                srcset="images/ns-train-horizontal-2400w.webp"
+                type="image/webp">
+            <img
+                src="images/ns-train-horizontal-1600w.jpg"
+                alt=""
+                loading="lazy"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center bottom;">
+        </picture>
         <div class="full-image-overlay">
             <h2>Sentiom is nu in Alpha fase</h2>
             <h3>Participatie is kosteloos en op aanvraag</h3>
@@ -121,7 +226,29 @@
             </div>
             <div class="features-grid">
                 <a href="https://www.linkedin.com/posts/polderr_%F0%9D%90%96%F0%9D%90%9E-%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AF%F0%9D%90%9E-%F0%9D%90%9A-%F0%9D%90%B0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%AB-yesterday-activity-7393721594663149568-om1M" target="_blank" class="feature-card" style="text-decoration: none; color: inherit;">
-                    <img src="images/hackaton.jpeg" alt="Nieuws" class="feature-card-image">
+                    <picture>
+                        <source
+                            srcset="images/hackaton-400w.avif 400w,
+                                    images/hackaton-600w.avif 600w,
+                                    images/hackaton-800w.avif 800w"
+                            type="image/avif">
+                        <source
+                            srcset="images/hackaton-400w.webp 400w,
+                                    images/hackaton-600w.webp 600w,
+                                    images/hackaton-800w.webp 800w"
+                            type="image/webp">
+                        <img
+                            src="images/hackaton-600w.jpg"
+                            srcset="images/hackaton-400w.jpg 400w,
+                                    images/hackaton-600w.jpg 600w,
+                                    images/hackaton-800w.jpg 800w"
+                            sizes="(max-width: 768px) 100vw, 362px"
+                            width="600"
+                            height="400"
+                            alt="Nieuws"
+                            class="feature-card-image"
+                            loading="lazy">
+                    </picture>
                     <div class="feature-card-content">
                         <h3>Team DataDoor wint Hackaton</h3>
                         <p>November 2025</p>
@@ -130,6 +257,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -137,7 +265,7 @@
             <div class="footer-column">
                 <img src="own logo files/SVG/Logo White.svg" alt="Sentiom" class="footer-logo">
                 <p class="footer-contact">
-                    <a href="https://www.linkedin.com/in/kenzo-h-6253411a4/" target="_blank">
+                    <a href="https://www.linkedin.com/in/kenzo-h-6253411a4/" target="_blank" aria-label="Connect on LinkedIn">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>

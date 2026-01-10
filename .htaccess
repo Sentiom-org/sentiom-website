@@ -1,0 +1,67 @@
+# Security Headers for sentiom.nl
+
+# Content Security Policy
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' cdn.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; form-action 'self' https://www.linkedin.com mailto:;"
+
+    # HTTP Strict Transport Security (HSTS)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Cross-Origin-Opener-Policy (COOP)
+    Header set Cross-Origin-Opener-Policy "same-origin"
+
+    # X-Frame-Options
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # X-Content-Type-Options
+    Header set X-Content-Type-Options "nosniff"
+
+    # Referrer-Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # X-XSS-Protection (for older browsers)
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Permissions-Policy (formerly Feature-Policy)
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Enable GZIP Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# NOTE: If you're using Cloudflare, you may need to configure these headers
+# in the Cloudflare dashboard instead of .htaccess
+# Go to: Cloudflare Dashboard → Your domain → Security → Headers
